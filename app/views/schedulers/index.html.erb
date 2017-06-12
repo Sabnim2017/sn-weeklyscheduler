@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>List of Schedulers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Color Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schedulers.each do |scheduler| %>
+      <tr>
+        <td><%= scheduler.name %></td>
+        <td><%= Color.find_by(id: scheduler.color_id).name %>
+        <td><%= link_to 'Edit', edit_scheduler_path(scheduler) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scheduler', new_scheduler_path %> |
+<%= link_to 'Back to Calendar', events_path %>

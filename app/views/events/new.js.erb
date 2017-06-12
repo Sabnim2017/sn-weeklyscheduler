@@ -1,0 +1,17 @@
+var window_new_event
+
+function display_new_event() {
+
+    alert("function entered");
+	
+	if (window_new_event && !window_new_event.closed){
+		alert("The window is already open");
+		window_new_event.focus();
+	} else {
+    	window_new_event = window.open("newEvent", 	"popupwindow", "width=400, height=400");
+    	window_new_event.document.write("<%= escape_javascript(render 'form') %>");
+    	index_window = window_new_event.parent.location.href
+    }
+}
+
+display_new_event();

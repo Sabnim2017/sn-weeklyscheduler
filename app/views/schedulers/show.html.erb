@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Details of Scheduler</h2>
+
+<p>
+  <strong>Name:</strong>
+  <%= @scheduler.name %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= Color.find_by(id: @scheduler.color_id).name %>
+
+</p>
+
+<%= link_to 'Edit', edit_scheduler_path(@scheduler) %> |
+<%= link_to 'Back to List of Schedulers', schedulers_path %>

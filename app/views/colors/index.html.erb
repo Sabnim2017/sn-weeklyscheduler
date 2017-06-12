@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>List of Colors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @colors.each do |color| %>
+      <tr>
+        <td><%= color.name %></td>
+        <td><%= color.code %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Back', events_path %>
