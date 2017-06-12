@@ -28,10 +28,6 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :recurring %><br>
-    <%= f.check_box :recurring %>
-  </div>
-  <div class="field">
     <%= f.label :scheduler_id %><br>
     <%= f.collection_select(:scheduler_id, Scheduler.order(:name), :id, :name) %>
   </div>
