@@ -7,3 +7,4 @@ Color.create!([
 	{name: "blue", code: "#0000b3"},
 	{name: "red", code: "#cc0000"}
 	])
+
