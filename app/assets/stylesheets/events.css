@@ -1,45 +1,33 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-table {
-	width: 100%;
-	height: 80%;
-}
-table, tr, th, td {
-	border: 1px solid black;
+body {
 	margin: 0;
-	border-spacing: 0;
+	padding: 0;
 }
-th {
-	background-color: lightgrey;
-}
-td {
-	width: 170px;
-    height: 100px;
-	vertical-align: top;
-	padding-top: 3px;
-}
-h1 {
-	text-align: center;
-	font-family: "Californian", Georgia, Serif;
-}
-#day {
+span.day {
 	background-color: lightblue;
-	padding: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
 	border-radius: 20px;
 }
-#link_newEvent {
-	vertical-align: center;
-	text-align: center;
-	text-decoration: none;
-	color: black;
-	font-size: 16px;
+.date {
+	min-height: 120px;
+}
+.cell {
+	padding: 3px;
+}
+.title {
+	font-weight: bold;
+	padding-left: 3px;
 }
 a.link_Event:link, a.link_Event:visited, a.link_Event:active{
 	text-decoration: none;
-	color: black;
+	color: #404040;
 }
 a.link_Event:hover
 {
 	background-color: lightblue;
+	opacity: 30%;
+	color: black;
 }

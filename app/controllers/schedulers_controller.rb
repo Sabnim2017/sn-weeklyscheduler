@@ -31,7 +31,7 @@ class SchedulersController < ApplicationController
         format.html { redirect_to @scheduler, notice: 'Scheduler was successfully created.' }
         format.json { render :show, status: :created, location: @scheduler }
       else
-        format.html { render :new }
+        format.html { render :new, notice: @scheduler.errors }
         format.json { render json: @scheduler.errors, status: :unprocessable_entity }
       end
     end
@@ -45,7 +45,7 @@ class SchedulersController < ApplicationController
         format.html { redirect_to @scheduler, notice: 'Scheduler was successfully updated.' }
         format.json { render :show, status: :ok, location: @scheduler }
       else
-        format.html { render :edit }
+        format.html { render :edit, notice: @scheduler.errors }
         format.json { render json: @scheduler.errors, status: :unprocessable_entity }
       end
     end

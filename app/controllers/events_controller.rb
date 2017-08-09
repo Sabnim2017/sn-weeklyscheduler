@@ -32,7 +32,7 @@ class EventsController < ApplicationController
         format.html { redirect_to events_path, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
-        format.html { render :new }
+        format.html { render :new, notice: @event.errors}
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end
@@ -46,7 +46,7 @@ class EventsController < ApplicationController
         format.html { redirect_to events_path, notice: 'Event was successfully updated.' }
         format.json { render :show, status: :ok, location: @event }
       else
-        format.html { render :edit }
+        format.html { render :edit, notice: @event.errors }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end
