@@ -26,7 +26,7 @@
           <span id="events">
             <% @events.each do |event| %>
               <% if event.start.to_date == day.to_date %>
-                <%= event.start.strftime("%H:%M") %>
+                <%= format_time(event.start) %>
                 <%= link_to event.title, edit_event_path(event), class: "link_Event" %><br>
             <% end %>
           </span>

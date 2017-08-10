@@ -1,5 +1,5 @@
 module EventsHelper
   def format_time time
-  	time.to_formatted_s(:time)
+  	time.strftime("%I:%M%p")
   end
 end
