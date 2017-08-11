@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Scheduler</th>
       <th>Color Name</th>
       <th>Action</th>
     </tr>
@@ -15,7 +15,7 @@
     <% @schedulers.each do |scheduler| %>
       <tr>
         <td><%= scheduler.name %></td>
-        <td><%= Color.find_by(id: scheduler.color_id).name %>
+        <td><%= Color.find_by(id: scheduler.color_id).name %></td>
         <td><%= link_to 'Edit', edit_scheduler_path(scheduler) %></td>
       </tr>
     <% end %>
