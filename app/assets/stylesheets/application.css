@@ -23,6 +23,9 @@ body {
 }
 h1 {
   color: #00004d;
+  display: block;
+  white-space: nowrap;
+  font-family: 'Overlook', sans-serif;
 }
 div.container {
   background-color: white;
@@ -34,7 +37,7 @@ div {
 	text-align: center;
 }
 .menuBar {
-  margin-top: -5px;
+  margin-top: -10px;
   font-size: 18px;
   font-weight: bold;
   color: lightblue;
@@ -116,6 +119,9 @@ div {
   span.mobileDay {
     display: none;
   }
+  div.menuBar {
+    margin-bottom: 25px;
+  }
   .col-sm-1 {
     width: 14.28%;
   }
@@ -149,6 +155,9 @@ div {
   }
   div.date {
     min-height: 60px;
+  }
+  div.menuBar {
+    margin-bottom: 25px;
   }
   .col-xs-1 {
     width: 14.28%;

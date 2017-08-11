@@ -34,6 +34,7 @@
   <div class="actions">
   <%= f.submit %>
   </div>
-<% end %>
+  <button><%= link_to 'Delete Event', @event, method: :delete, data: { confirm: 'Are you sure?' }, class: "link_Event" %></button>
 
-</br>
+<% end %>
+<br>

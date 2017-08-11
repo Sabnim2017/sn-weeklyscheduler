@@ -1,0 +1,22 @@
+<h1>Login</h1>
+
+<%= form_for(:user, url: sessions_path) do |f| %>
+
+<p id="notice"><%= notice %></p>
+
+  <div class="field">
+    <%= f.label :name %> <br> 
+    <%= f.text_field :name %>
+  </div>
+  <br>
+  <div class="fiels">
+    <%= f.label :password %> <br> 
+    <%= f.password_field :password %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit "Login" %>
+  </div>
+
+
+ <% end %>

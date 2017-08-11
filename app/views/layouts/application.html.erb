@@ -9,7 +9,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Oxygen:400,500,600' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Overlook" rel="stylesheet"> 
 </head>
 <body>
   <header>
@@ -19,6 +19,12 @@
         <span><%= link_to 'Calendar', events_path, class: "link_Event" %></span> | 
         <span><%= link_to 'Add Event', new_event_path, class: "link_Event" %></span> |
         <span><%= link_to 'Settings', schedulers_path, class: "link_Event" %></span>
+        <% if (logged_in?) %>
+         <span style='float: right;'>
+           User: <%= current_user.name %> | 
+           <%= link_to "Logout", logout_path, method: :delete %>
+          </span>
+        <% end %>
     </div>
   </header>
     <div>

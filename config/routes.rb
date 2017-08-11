@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   resources :events
   resources :schedulers
   resources :colors
+  resources :sessions, only: [:new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -11,6 +18,8 @@ Rails.application.routes.draw do
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  get "/login" => "sessions#new", as: "login"
+  delete "/logout" => "sessions#destroy", as: "logout"
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
