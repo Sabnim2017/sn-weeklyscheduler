@@ -17,17 +17,33 @@ span.day {
 .cell {
 	padding: 3px;
 }
+span.green {
+	color: #39ac39;
+	text-decoration: none;
+}
+span.blue {
+	color: #000099;
+}
+span.pink {
+	color: #ff66b3;
+}
+span.red {
+	color: #cc3300;
+}
+span.black {
+	color: #000000;
+}
 .title {
 	font-weight: bold;
 	padding-left: 3px;
 }
 a.link_Event:link, a.link_Event:visited, a.link_Event:active{
 	text-decoration: none;
-	color: #404040;
+	color: #4d4d4d;
 }
 a.link_Event:hover
 {
 	background-color: lightblue;
-	opacity: 30%;
 	color: black;
+	opacity: 30%;
 }

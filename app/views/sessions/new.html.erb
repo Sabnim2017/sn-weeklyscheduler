@@ -1,15 +1,17 @@
+<div class="login_wrapper">
 <h1>Login</h1>
 
 <%= form_for(:user, url: sessions_path) do |f| %>
 
 <p id="notice"><%= notice %></p>
 
+
   <div class="field">
     <%= f.label :name %> <br> 
     <%= f.text_field :name %>
   </div>
   <br>
-  <div class="fiels">
+  <div class="field">
     <%= f.label :password %> <br> 
     <%= f.password_field :password %>
   </div>
@@ -18,5 +20,11 @@
     <%= f.submit "Login" %>
   </div>
 
-
  <% end %>
+
+  <br><br>
+  <h4>This Ruby on Rails App was the first personal project I worked on to replace our dry-erase fridge calender. If you would like to check the app out, please use the name "guest" and password "forguests" to log in.</h4>
+
+  <h4>In case of any questions, please contact me at sabnimtz@outlook.com.</h4>
+
+</div>

@@ -2,10 +2,12 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   respond_to :js, :html, :json
 
+
   # GET /events
   # GET /events.json
   def index
     @events = current_user.events.all.order('start ASC')
+
   end
 
   # GET /events/1
@@ -14,8 +16,8 @@ class EventsController < ApplicationController
   end
 
   # GET /events/new
-  def new
-    @event = current_user.events.new
+  def new    
+    @event = current_user.events.new(:start => Time.now, :end => Time.now + 1.hour)
   end
 
   # GET /events/1/edit

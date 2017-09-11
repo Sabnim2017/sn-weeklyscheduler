@@ -27,8 +27,17 @@ h1 {
   white-space: nowrap;
   font-family: 'Overlook', sans-serif;
 }
+select {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.form-group {
+  margin-top: 10px;
+}
 div.container {
   background-color: white;
+  margin-top: 5px;
+  padding: 5px 10px;
 }
 div {
 	font-size: 16px;
@@ -43,6 +52,27 @@ div {
   color: lightblue;
 }
 
+@media screen\0 { /* IE Hacks: targets IE 8, 9 and 10 */        
+    select, option {
+        height:30px;
+        line-height: 0.8;
+    }     
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {  /*safari and chrome*/
+    select {
+        height:30px;
+        line-height:0.5em;
+    }
+    option {
+       line-height:0.5em;
+       padding: 0;
+       margin: 0;
+    } 
+}
+select::-moz-focus-inner { /*Remove button padding in FF*/ 
+    border: 0;
+    padding: 0;
+} 
 /* Simple Responsive Framework. */
 .row {
   width: 100%;

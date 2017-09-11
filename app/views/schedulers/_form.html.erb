@@ -1,3 +1,4 @@
+
 <%= form_for(@scheduler) do |f| %>
   <% if @scheduler.errors.any? %>
     <div id="error_explanation">
@@ -17,9 +18,12 @@
   </div>
   <div class="field">
     <%= f.label :color_id %><br>
-    <%= f.collection_select(:color_id, Color.order(:name), :id, :name) %>
+    <%= f.collection_select(:color_id, Color.all.order(:name), :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+  <button><%= link_to 'Delete Scheduler', @scheduler, method: :delete, data: { confirm: 'Are you sure?' }, class: "link_Event" %></button>
+  <br>
 <% end %>
+<br>
